@@ -11,7 +11,7 @@ const Panel = () => {
       <Flex className="panel">
         <Avatar img={UserProfileImage} />
         <Flex className="username" flexGrow={1}>
-          Shanks
+          John Doe
         </Flex>
         <Tooltip
           hasArrow

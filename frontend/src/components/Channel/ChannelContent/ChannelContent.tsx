@@ -17,7 +17,7 @@ const MemberItem = ({ img, onlineStatus = 'online' }: any) => {
   return (
     <Flex className="member-item">
       <Avatar img={img} onlineStatus={onlineStatus} />
-      <Flex>Shanks</Flex>
+      <Flex>John Doe</Flex>
     </Flex>
   );
 };
