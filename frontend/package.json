@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "license": "MIT",
-    "homepage": "http://rohitkrishna094.github.io/discord-clone/frontend",
+    "homepage": "http://rohitkrishna094.github.io/discord-clone",
     "dependencies": {
         "@chakra-ui/core": "^0.8.0",
         "@chakra-ui/icons": "^1.0.5",
