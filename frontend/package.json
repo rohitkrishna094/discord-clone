@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "license": "MIT",
+    "homepage": "http://rohitkrishna094.github.io/discord-clone/frontend",
     "dependencies": {
         "@chakra-ui/core": "^0.8.0",
         "@chakra-ui/icons": "^1.0.5",
@@ -13,6 +14,7 @@
         "@testing-library/react": "^11.1.0",
         "@testing-library/user-event": "^12.1.10",
         "@types/classnames": "^2.2.11",
+        "@types/gh-pages": "^3.0.0",
         "@types/jest": "^26.0.15",
         "@types/node": "^12.0.0",
         "@types/react": "^17.0.0",
