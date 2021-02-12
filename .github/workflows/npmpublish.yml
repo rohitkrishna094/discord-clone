@@ -29,7 +29,6 @@ jobs:
         env:
           CI: ''
       - name: Build and Deploy
-        working-directory: ./frontend
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
