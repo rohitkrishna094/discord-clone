@@ -26,7 +26,6 @@ jobs:
         run: npm run build
         env:
           CI: ''
-          REACT_APP_BASE_URL: https://trello-clone-backend.herokuapp.com/api
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
