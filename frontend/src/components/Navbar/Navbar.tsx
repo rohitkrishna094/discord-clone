@@ -25,8 +25,6 @@ const ServerIcon = ({
   let classes = selected ? 'selected' : '';
   classes += isServerAddButton ? 'server-add' : '';
 
-  console.log(selected);
-
   return (
     <div
       // className={classNames('icon-wrapper', {
