@@ -1,0 +1,30 @@
+@import '../../../index.scss';
+.panel-wrapper {
+    background-color: $panel-background-color;
+    color: $white;
+    flex: 0 0 auto;
+    margin-top: auto;
+}
+
+.panel {
+    cursor: pointer;
+    height: 53px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 8px;
+    align-items: center;
+    // might need to remove width
+    width: 100%;
+    .username {
+        margin-right: 8px;
+    }
+    .settings {
+        color: #b9bbbe;
+        padding: 6px;
+        border-radius: 4px;
+        &:hover {
+            color: #dcddde;
+            background-color: rgba(79, 84, 92, 0.32);
+        }
+    }
+}

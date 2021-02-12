@@ -1,0 +1,103 @@
+@import '../../index.scss';
+.sidebar-wrapper {
+    background-color: $secondary-background-color;
+    width: 240px;
+    min-width: 240px;
+    max-height: 100vh;
+}
+
+.sidebar-nav {
+    padding: 12px 16px;
+    color: $white;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid $primary-background-color-darker;
+    cursor: pointer;
+    box-shadow: 0 2px 2px -2px $primary-background-color-darker;
+    transition: all 0.2s;
+    &:hover {
+        background-color: rgba(79, 84, 92, 0.16);
+    }
+    .dropdown-arrow {
+        font-size: 20px;
+    }
+    .dropdown-close {
+        position: absolute;
+        opacity: 0;
+        font-size: 20px;
+    }
+    #sidebar-title {
+        margin: 0;
+    }
+}
+
+.popover-content {
+    margin-bottom: 10px;
+    background-color: #18191c;
+    color: #b9bbbe;
+    outline: none;
+    border-radius: 4px;
+}
+
+.sidebar-nav-menu {
+    font-size: 14px;
+    padding: 10px;
+    width: 220px;
+    cursor: pointer;
+    .horizontal-line-divider {
+        width: 100%;
+    }
+    .sidebar-nav-menu-item {
+        width: 100%;
+        padding: 4px 8px;
+        border-radius: 3px;
+        &:hover {
+            background-color: #5c6fb1;
+            color: $white;
+        }
+        &:hover svg {
+            fill: $white;
+        }
+        .icon {
+            font-size: 18px;
+        }
+    }
+    .danger:hover {
+        background-color: #F04747;
+    }
+}
+
+.sidebar-content {
+    flex: 0 1 auto;
+    overflow-y: hidden;
+    font-size: 16px;
+    padding: 10px 8px;
+    color: #8e9297;
+    overflow-y: hidden;
+    &:hover {
+        overflow-y: auto;
+    }
+    &::-webkit-scrollbar {
+        width: 0.4em;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary-background-color-darker;
+    }
+}
+
+.sidebar-content-item {
+    align-items: center;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    .hash-icon {
+        margin-top: -2px;
+        margin-right: 5px;
+        font-size: 20px;
+    }
+    &:hover {
+        background-color: rgba(79, 84, 92, 0.16);
+        color: $white
+    }
+}

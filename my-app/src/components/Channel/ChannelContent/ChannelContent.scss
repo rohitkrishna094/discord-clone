@@ -1,0 +1,40 @@
+@import '../../../index.scss';
+.channel-content {
+    // max-height: calc(100vh - 51px);
+    overflow-y: hidden;
+    height: 100%;
+}
+
+.chat-section {
+    width: 100%;
+}
+
+.member-list {
+    color: #8e9297;
+    cursor: pointer;
+    padding: 6px 10px;
+    margin-left: auto;
+    background-color: $secondary-background-color;
+    min-width: 240px;
+    flex-direction: column;
+    overflow-y: hidden;
+    &:hover {
+        overflow-y: auto;
+    }
+    &::-webkit-scrollbar {
+        width: 0.4em;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary-background-color-darker;
+    }
+}
+
+.member-item {
+    padding: 4px 8px;
+    align-items: center;
+    border-radius: 2px;
+    &:hover {
+        color: $primary-muted-color;
+        background-color: rgba(79, 84, 92, 0.16);
+    }
+}

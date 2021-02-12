@@ -1,11 +1,41 @@
+$primary-color: #7289da;
+$secondary-color: #43b581;
+$white: white;
+$primary-background-color: #36393f;
+$primary-background-color-darker:#202225;
+$secondary-background-color:#2F3136;
+$primary-muted-color: #dcddde;
+$panel-background-color: #292B2F;
+$online-background-color: #43B581;
+$invisible-background-color: #747F8D;
+$away-background-color: #FAA61A;
+$busy-background-color: #F04747;
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #2F3136;
+    background-color: $secondary-background-color;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    // font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Catamaran', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    user-select: none;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
 }
