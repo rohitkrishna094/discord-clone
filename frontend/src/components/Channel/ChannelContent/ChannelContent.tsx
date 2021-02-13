@@ -4,14 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Avatar from '../../shared/Avatar/Avatar';
 import image from '../../../assets/images/default-avatar.png';
 import './ChannelContent.scss';
-
-const ChatSection = () => {
-  return (
-    <Flex className="chat-section">
-      <h1>Chat Section works</h1>
-    </Flex>
-  );
-};
+import ChatSection from '../ChatSection/ChatSection';
 
 const MemberItem = ({ img, onlineStatus = 'online' }: any) => {
   return (

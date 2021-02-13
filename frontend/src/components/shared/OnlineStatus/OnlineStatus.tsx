@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import './OnlineStatus.scss';
 
 /*
@@ -8,7 +8,11 @@ online, invisible, away, busy
 */
 
 const OnlineStatus = ({ type = 'online', className = '' }: any) => {
-  return <Box className={`status ${type} ${className}`} />;
+  return (
+    <Flex className="status">
+      <Box className={`status-inner ${type} ${className}`} />
+    </Flex>
+  );
 };
 
 export default OnlineStatus;

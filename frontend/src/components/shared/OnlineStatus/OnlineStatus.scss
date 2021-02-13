@@ -1,9 +1,20 @@
 @import '../../../index.scss';
 .status {
-    height: 10px;
-    width: 10px;
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: $primary-background-color;
+    background-color: $secondary-background-color;
+    border-radius: 100%;
+}
+
+.status-inner {
+    height: 50%;
+    width: 50%;
     position: absolute;
     border-radius: 100%;
+    top: 25%;
+    left: 25%;
 }
 
 .online {

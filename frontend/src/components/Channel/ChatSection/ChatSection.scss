@@ -1,0 +1,49 @@
+@import '../../../index.scss';
+.chat-section-wrapper {
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 20px;
+    padding-top: 0;
+}
+
+.chat-section {
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+.chat-type-group {
+    margin-top: auto;
+    textarea {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        color: $primary-muted-color;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 50px;
+        padding-right: 50px;
+        width: 100%;
+        border: none;
+        outline: none;
+        background-color: $chat-input-background-color;
+        border-radius: 6px;
+        font-size: 14px;
+        position: relative;
+        &::-webkit-scrollbar {
+            width: 0.4em;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $primary-background-color-darker;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    .add-icon-wrapper {
+        cursor: pointer;
+        top: 12px;
+        left: 12px;
+        font-size: 24px;
+        color: #B9BBBE;
+        .add-icon {}
+    }
+}
