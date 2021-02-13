@@ -2,17 +2,61 @@
 .chat-section-wrapper {
     flex-direction: column;
     width: 100%;
-    padding: 20px 20px;
+    padding: 20px 0;
     padding-top: 0;
 }
 
 .chat-section {
-    height: 100%;
+    margin-top: auto;
     margin-bottom: 10px;
+    // background-color: red;
+    flex-direction: column;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 0.4em;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $primary-background-color-darker;
+    }
+}
+
+.chat-section-item {
+    padding: 0px 20px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+    .status {
+        display: none;
+    }
+    .message-wrapper {
+        flex-direction: column;
+        .message {
+            font-weight: 100;
+            text-align: justify;
+            // todo change font family for actual message. make it a bit lighter.
+            color: $primary-muted-color;
+        }
+    }
+    .user-info {
+        align-items: center;
+        .username {
+            margin-right: 10px;
+        }
+        .message-date {
+            color: $text-muted-color;
+            font-size: 14px;
+        }
+    }
+}
+
+.chat-section-header {
+    flex-direction: column;
+    #hash-icon {
+        font-size: 72px;
+    }
 }
 
 .chat-type-group {
-    margin-top: auto;
+    padding: 0 20px;
     textarea {
         overflow-x: hidden;
         overflow-y: scroll;
@@ -41,9 +85,8 @@
     .add-icon-wrapper {
         cursor: pointer;
         top: 12px;
-        left: 12px;
+        left: 32px;
         font-size: 24px;
         color: #B9BBBE;
-        .add-icon {}
     }
 }

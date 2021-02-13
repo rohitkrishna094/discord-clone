@@ -7,9 +7,11 @@ import {
   PopoverTrigger,
   VStack
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import HorizontalLine from '../HorizontalLine/HorizontalLine';
 import OnlineStatus from '../OnlineStatus/OnlineStatus';
+import DefaultAvatar from '../../../assets/images/default-avatar.png';
 import './Avatar.scss';
 
 const UserMenuItem = ({
@@ -50,7 +52,15 @@ const UserMenu = () => {
   );
 };
 
-const Avatar = ({ img, onlineStatus = 'online' }: any) => {
+const Avatar = ({
+  img = DefaultAvatar,
+  onlineStatus = 'online',
+  random = false
+}: any) => {
+  if (random) {
+    const uid = uuidv4();
+    img = `https://i.pravatar.cc/150?u=${uid}`;
+  }
   return (
     <Popover placement="top-end">
       <PopoverTrigger>

@@ -108,7 +108,7 @@ const Navbar = () => {
         );
       })}
 
-      {/* {[...Array(18)].map((_) => {
+      {[...Array(18)].map((_) => {
         const rand = Math.floor(Math.random() * 100);
         return (
           <ListItem
@@ -117,7 +117,7 @@ const Navbar = () => {
             img={`https://picsum.photos/id/${rand}/200`}
           />
         );
-      })} */}
+      })}
       <ListItem
         name="Add a Server"
         svg={<PlusSvg />}
