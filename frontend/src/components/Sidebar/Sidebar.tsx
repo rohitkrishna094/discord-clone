@@ -19,8 +19,9 @@ import { GiCutDiamond } from 'react-icons/gi';
 import { HiUserAdd } from 'react-icons/hi';
 import { IoNotificationsSharp } from 'react-icons/io5';
 import { BiHash } from 'react-icons/bi';
-import { RootStateOrAny, useSelector } from 'react-redux';
+import { RootStateOrAny, useDispatch, useSelector } from 'react-redux';
 import Panel from './Panel/Panel';
+import { SELECT_CHANNEL } from '../../store/actionTypes';
 import './Sidebar.scss';
 import HorizontalLine from '../shared/HorizontalLine/HorizontalLine';
 
@@ -112,16 +113,18 @@ const SideBarContentItem = ({
       onClick={(e) => onClick(e, id)}
     >
       <BiHash className="hash-icon" />
-      <Box>{channelName}</Box>
+      <Box className="channel-name">{channelName}</Box>
     </Flex>
   );
 };
 
 const SideBarContent = ({ data }: any) => {
   const [selected, setSelected] = useState(0);
+  const dispatch = useDispatch();
 
   const onClick = (e: SyntheticEvent, id: number) => {
     setSelected(id);
+    dispatch({ type: SELECT_CHANNEL, payload: { id } });
   };
 
   return (
@@ -144,12 +147,12 @@ const SideBarContent = ({ data }: any) => {
 const Sidebar = () => {
   const mockState = useSelector((state: RootStateOrAny) => state.mock);
   const { selectedServer, selectedChannel } = mockState;
-  const channelData = mockState.data.servers[selectedServer];
+  const serverData = mockState.data.servers[selectedServer];
 
   return (
     <Flex className="sidebar-wrapper" direction="column">
-      <SideBarNav title={channelData.name} />
-      <SideBarContent data={channelData} />
+      <SideBarNav title={serverData.name} />
+      <SideBarContent data={serverData} />
       <Panel />
     </Flex>
   );

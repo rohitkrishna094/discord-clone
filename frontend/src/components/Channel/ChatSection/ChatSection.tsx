@@ -67,7 +67,7 @@ const ChatSection = () => {
   useEffect(() => {
     setTimeout(() => {
       scrollToBottom();
-    }, 500);
+    }, 0);
   }, []);
 
   return (

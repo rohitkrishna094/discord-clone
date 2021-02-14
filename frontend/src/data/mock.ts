@@ -4,7 +4,10 @@ const data = {
       id: 0,
       name: 'Leetcode Army',
       channels: [
-        { id: 0, name: 'reflect' },
+        {
+          id: 0,
+          name: 'abcdefghijklmnopqrstuvwxyz'
+        },
         { id: 1, name: 'subway' },
         { id: 2, name: 'poem' },
         { id: 3, name: 'retire' },

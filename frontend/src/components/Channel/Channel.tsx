@@ -13,6 +13,7 @@ import { RiPushpinFill } from 'react-icons/ri';
 import { CgInbox } from 'react-icons/cg';
 import { BsPeopleFill } from 'react-icons/bs';
 import './Channel.scss';
+import { RootStateOrAny, useSelector } from 'react-redux';
 import ChannelContent from './ChannelContent/ChannelContent';
 
 const ToolbarWrapper = ({ children, label }: any) => {
@@ -74,14 +75,14 @@ const Toolbar = () => {
   );
 };
 
-const ChannelHeader = () => {
+const ChannelHeader = ({ data }: any) => {
   return (
     <Flex className="channel-header">
       <Flex className="hash-icon-wrapper">
         <BiHash className="hash-icon" />
       </Flex>
       <Flex alignItems="center" justifyContent="center" mr="auto">
-        <h4>Channel Name</h4>
+        <h4>{data?.name}</h4>
       </Flex>
       <Flex>
         <Toolbar />
@@ -91,9 +92,14 @@ const ChannelHeader = () => {
 };
 
 const Channel = () => {
+  const mockState = useSelector((state: RootStateOrAny) => state.mock);
+  const { selectedServer, selectedChannel } = mockState;
+  const serverData = mockState.data.servers[selectedServer];
+  const channelData = serverData?.channels[selectedChannel];
+
   return (
     <Flex className="channel">
-      <ChannelHeader />
+      <ChannelHeader data={channelData} />
       <ChannelContent />
     </Flex>
   );

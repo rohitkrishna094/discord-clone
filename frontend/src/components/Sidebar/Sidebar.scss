@@ -86,18 +86,22 @@
 }
 
 .sidebar-content-item {
+    max-height: 35px;
+    overflow: hidden;
     align-items: center;
     cursor: pointer;
     padding: 4px 8px;
     border-radius: 4px;
     margin-bottom: 2px;
-    .hash-icon {
-        margin-top: -2px;
-        margin-right: 5px;
-        font-size: 20px;
-    }
     &:hover {
         background-color: rgba(79, 84, 92, 0.16);
         color: $white
     }
+    .hash-icon {
+        margin-top: -2px;
+        margin-right: 5px;
+        font-size: 20px;
+        min-width: 20px;
+    }
+    .channel-name {}
 }
