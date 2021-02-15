@@ -12,7 +12,7 @@ const mockReducer = (state = initialState, action: any) => {
       return { ...state, selectedServer: action.payload.selectedServer };
     case types.SELECT_CHANNEL:
       console.log('in reducer', action);
-      return { ...state, selectedChannel: action.payload.selectedChannel };
+      return { ...state, selectedChannel: action.payload.id };
     default:
       return state;
   }

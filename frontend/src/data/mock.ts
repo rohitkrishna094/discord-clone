@@ -2,7 +2,7 @@ const data = {
   servers: [
     {
       id: 0,
-      name: 'Leetcode Army',
+      name: 'ReactiFlux',
       channels: [
         {
           id: 0,
@@ -35,7 +35,7 @@ const data = {
     },
     {
       id: 1,
-      name: 'DSA - Key to FAANG',
+      name: 'CSCQ',
       channels: [
         { id: 0, name: 'conservative' },
         { id: 1, name: 'conservation' },
