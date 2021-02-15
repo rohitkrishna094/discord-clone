@@ -19,7 +19,7 @@ import { GiCutDiamond } from 'react-icons/gi';
 import { HiUserAdd } from 'react-icons/hi';
 import { IoNotificationsSharp } from 'react-icons/io5';
 import { BiHash } from 'react-icons/bi';
-import { RootStateOrAny, useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Panel from './Panel/Panel';
 import { SELECT_CHANNEL } from '../../store/actionTypes';
 import './Sidebar.scss';
@@ -125,12 +125,13 @@ const SideBarContent = ({ data }: any) => {
   const onClick = (e: SyntheticEvent, id: number) => {
     setSelected(id);
     dispatch({ type: SELECT_CHANNEL, payload: { id } });
+    // dispatch(selectChannel(id));
   };
 
   return (
     <Box className="sidebar-content">
       <Flex mb="auto" direction="column">
-        {data.channels.map((channel: any) => (
+        {data?.channels.map((channel: any) => (
           <SideBarContentItem
             key={Math.random()}
             id={channel.id}
@@ -144,15 +145,11 @@ const SideBarContent = ({ data }: any) => {
   );
 };
 
-const Sidebar = () => {
-  const mockState = useSelector((state: RootStateOrAny) => state.mock);
-  const { selectedServer, selectedChannel } = mockState;
-  const serverData = mockState.data.servers[selectedServer];
-
+const Sidebar = ({ channelData }: any) => {
   return (
     <Flex className="sidebar-wrapper" direction="column">
-      <SideBarNav title={serverData.name} />
-      <SideBarContent data={serverData} />
+      <SideBarNav title={channelData?.name} />
+      <SideBarContent data={channelData} />
       <Panel />
     </Flex>
   );

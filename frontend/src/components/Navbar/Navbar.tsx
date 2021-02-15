@@ -1,10 +1,7 @@
 import React from 'react';
 import { Flex, Box, Tooltip } from '@chakra-ui/react';
-import classNames from 'classnames/bind';
-import { RootStateOrAny, useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import DiscordSvg from '../../assets/svg/DiscordSvg';
-import server1 from '../../assets/images/server1.png';
-import server2 from '../../assets/images/server2.png';
 import './Navbar.scss';
 import HorizontalLine from '../shared/HorizontalLine/HorizontalLine';
 import PlusSvg from '../../assets/svg/PlusSvg';
@@ -81,10 +78,7 @@ const ListItem = ({ selected, img, name, svg, id = -1 }: any) => {
   );
 };
 
-const Navbar = () => {
-  const mockState = useSelector((state: RootStateOrAny) => state.mock);
-  const { selectedServer } = mockState;
-
+const Navbar = ({ selectedServer, servers }: any) => {
   return (
     <Flex className="navbar" align="center" direction="column">
       <ListItem
@@ -95,7 +89,7 @@ const Navbar = () => {
       <HorizontalLine />
       {/* <ListItem img={server1} selected name="Leetcode Army" />
       <ListItem img={server2} name="DSA - Key To Faang" /> */}
-      {mockState.data.servers.map((server: any, i: number) => {
+      {servers?.map((server: any, i: number) => {
         const rand = Math.floor(Math.random() * 100) + 100;
         return (
           <ListItem

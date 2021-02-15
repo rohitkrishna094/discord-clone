@@ -4,10 +4,10 @@ import Channel from '../Channel/Channel';
 import Sidebar from '../Sidebar/Sidebar';
 import './Base.scss';
 
-const Base = () => {
+const Base = ({ channelData }: any) => {
   return (
     <Flex className="base">
-      <Sidebar />
+      <Sidebar channelData={channelData} />
       <Channel />
     </Flex>
   );
